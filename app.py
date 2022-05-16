@@ -4,9 +4,10 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 import pathlib
+import platform
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux':pathlib.WindowsPath = pathlib.PosixPath
 
 # LOAD
 
